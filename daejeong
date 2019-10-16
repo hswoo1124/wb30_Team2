@@ -1,4 +1,0 @@
-public void HelloWorld()
-{
-  MessageBox.Show("Hello World")
-}
