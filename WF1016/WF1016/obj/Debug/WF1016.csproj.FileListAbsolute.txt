@@ -1,0 +1,11 @@
+C:\Users\user\source\repos\WF1016\WF1016\bin\Debug\WF1016.exe.config
+C:\Users\user\source\repos\WF1016\WF1016\bin\Debug\WF1016.exe
+C:\Users\user\source\repos\WF1016\WF1016\bin\Debug\WF1016.pdb
+C:\Users\user\source\repos\WF1016\WF1016\obj\Debug\WF1016.csprojAssemblyReference.cache
+C:\Users\user\source\repos\WF1016\WF1016\obj\Debug\WF1016.Form1.resources
+C:\Users\user\source\repos\WF1016\WF1016\obj\Debug\WF1016.Properties.Resources.resources
+C:\Users\user\source\repos\WF1016\WF1016\obj\Debug\WF1016.csproj.GenerateResource.cache
+C:\Users\user\source\repos\WF1016\WF1016\obj\Debug\WF1016.csproj.CoreCompileInputs.cache
+C:\Users\user\source\repos\WF1016\WF1016\obj\Debug\WF1016.exe
+C:\Users\user\source\repos\WF1016\WF1016\obj\Debug\WF1016.pdb
+C:\Users\user\source\repos\WF1016\WF1016\obj\Debug\WF1016.Form2.resources
