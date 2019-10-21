@@ -78,8 +78,8 @@ namespace OA_Server_Consol
             string closetime = string.Empty;
             string room = string.Empty;
             string table1 = string.Empty;
-            string[] price = null;
-            string[] title = null;
+            string[] price = new string[ResturantSearcher.Instance.reslist4.Count];
+            string[] title = new string[ResturantSearcher.Instance.reslist4.Count];
 
             XmlNode seq_node = xn.SelectSingleNode("foodSeq");
             seq = ConvertString(seq_node.InnerText);
@@ -102,15 +102,15 @@ namespace OA_Server_Consol
             XmlNode table1_node = xn.SelectSingleNode("table2");
             table1 = ConvertString(table1_node.InnerText);
 
-
-            foreach(Etc etc in ResturantSearcher.Instance.reslist2)
+            foreach (Etc etc in ResturantSearcher.Instance.reslist4)
             {
-                for(int i = 0; i < ResturantSearcher.Instance.reslist2.Count(); i++ )
+                for (int i = 0; i < ResturantSearcher.Instance.reslist4.Count; i++)
                 {
-                    price[i] = ResturantSearcher.Instance.reslist2[i].Price;
-                    title[i] = ResturantSearcher.Instance.reslist2[i].Title;
+                    price[i] = ResturantSearcher.Instance.reslist4[i].Price;
+                    title[i] = ResturantSearcher.Instance.reslist4[i].Title;
                 }
             }
+            
             return new Resturant(seq, name, addr, opentime, closetime, room, table1, price, title);
         }
 

@@ -31,8 +31,7 @@ namespace OA_Server_Consol
             ServerRun();
             while (true)
             {
-                string name = wblib.inputstring("이름을 검색하세요 : ");
-                ResturantSearcher.Instance.SearchResturant(name);
+                ResturantSearcher.Instance.SearchResturant();
                 switch (Console.ReadKey().Key)
                 { 
                     case ConsoleKey.Escape: ServerEnd(); break;

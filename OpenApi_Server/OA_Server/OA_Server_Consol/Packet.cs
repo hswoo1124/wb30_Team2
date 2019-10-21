@@ -25,15 +25,17 @@ namespace OA_Server_Consol
         #endregion
 
         wbServer server = new wbServer();
+        public string name;
 
         #region 수신패킷 분석 및 처리
         public void PaserByteData(Socket sock, byte[] data)
         {
             string msg = Encoding.Default.GetString(data);
             string[] token = msg.Split('@');
+            name = token[1];
             switch (token[0].Trim())
             {
-                case "NEEDNAME": NeedName(sock, token[1]); break;
+                case "NEEDNAME": NeedName(sock, name); break;
                 case "NEEDMENU": NeedMenu(sock, token[1]); break;
             }
         }
@@ -48,16 +50,18 @@ namespace OA_Server_Consol
 
             server.Send(sock, ackmessage);
         }
-
-        string NeedNameAck(string name, string title, string price)
+        string NeedNameAck(string name, string[] title, string[] price)
         {
             string msg = null;
 
             msg += "NEEDNAMEACK@";
             msg += name + "#";
-            msg += title + "#";
-            msg += price;
-
+            for (int i = 0; i < title.Length; i++)
+            {
+                msg += title[i] + "#";
+                msg += price[i] + "#";
+            }
+            msg = msg.Substring(0, msg.Length - 1);
             return msg;
         }
 

@@ -5,3 +5,10 @@ C:\Users\user\source\repos\OA_Server_Consol\OA_Server_Consol\obj\Debug\OA_Server
 C:\Users\user\source\repos\OA_Server_Consol\OA_Server_Consol\obj\Debug\OA_Server_Consol.csproj.CoreCompileInputs.cache
 C:\Users\user\source\repos\OA_Server_Consol\OA_Server_Consol\obj\Debug\OA_Server_Consol.exe
 C:\Users\user\source\repos\OA_Server_Consol\OA_Server_Consol\obj\Debug\OA_Server_Consol.pdb
+C:\Users\user\source\repos\OA_Server\OA_Server_Consol\obj\Debug\OA_Server_Consol.csprojAssemblyReference.cache
+C:\Users\user\source\repos\OA_Server\OA_Server_Consol\obj\Debug\OA_Server_Consol.csproj.CoreCompileInputs.cache
+C:\Users\user\source\repos\OA_Server\OA_Server_Consol\obj\Debug\OA_Server_Consol.exe
+C:\Users\user\source\repos\OA_Server\OA_Server_Consol\obj\Debug\OA_Server_Consol.pdb
+C:\Users\user\source\repos\OA_Server\OA_Server_Consol\bin\Debug\OA_Server_Consol.exe.config
+C:\Users\user\source\repos\OA_Server\OA_Server_Consol\bin\Debug\OA_Server_Consol.exe
+C:\Users\user\source\repos\OA_Server\OA_Server_Consol\bin\Debug\OA_Server_Consol.pdb

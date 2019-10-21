@@ -39,6 +39,7 @@ namespace OA_Server_Consol
         {
             for (int seq = 900; seq < 919; seq++)
             {
+                reslist4.Clear();
                 XmlString2 = Data(seq);
                 doc = new XmlDocument();
                 doc.LoadXml(XmlString2);
@@ -48,19 +49,20 @@ namespace OA_Server_Consol
 
                 XmlNode node = doc.SelectSingleNode("ServiceResult");
                 XmlNode n = node.SelectSingleNode("msgBody");
+                XmlNode d = n.SelectSingleNode("foodMenuEtcListAll");
                 Resturant resturant = null;
                 Etc etc = null;
+                
                 foreach (XmlNode el in node.SelectNodes("msgBody"))
                 {
-                    resturant = Resturant.MakeResturant(el);
-                    reslist3.Add(resturant);
-
-                    foreach (XmlNode el2 in n.SelectNodes("FoodMenuEtcList"))
+                    foreach (XmlNode el2 in d.SelectNodes("FoodMenuEtcList"))
                     {
                         etc = Resturant.MakeResturant_etc(el2);
                         reslist4.Add(etc);
                     }
-                }
+                    resturant = Resturant.MakeResturant(el);
+                    reslist3.Add(resturant); 
+                }  
             }
         }
         public string Data(int seq)
@@ -83,8 +85,11 @@ namespace OA_Server_Consol
             return results;
         }
         #endregion
-        public void SearchResturant(string name)
+
+        #region 데이터를 받아옴
+        public void SearchResturant()
         {
+            string name = Packet.Instance.name;
             reslist.Clear();
             XmlString = Find(name);
             doc = new XmlDocument();
@@ -109,48 +114,7 @@ namespace OA_Server_Consol
                 }
             }
         }
-        //public string SearchResturant_price()
-        //{
-        //    XmlString = Find();
-        //    doc = new XmlDocument();
-        //    doc.LoadXml(XmlString);
-        //    doc.Save("Search.xml");
-
-        //    ==============================================
-
-        //    XmlNode node = doc.SelectSingleNode("ServiceResult");
-        //    XmlNode n = node.SelectSingleNode("foodMenuEtcListAll");
-        //    XmlNode d = node.SelectSingleNode("FoodMenuEtcList");
-        //    string price = null;
-        //    foreach (XmlNode el in d.SelectSingleNode("price"))
-        //    {
-        //        price = Resturant.MakeResturant_price(el);
-        //        return price;
-        //    }
-        //    return null;
-        //}
-        //public string SearchResturant_title()
-        //{
-        //    XmlString = Find();
-        //    doc = new XmlDocument();
-        //    doc.LoadXml(XmlString);
-        //    doc.Save("Search.xml");
-
-        //    ==============================================
-
-        //    XmlNode node = doc.SelectSingleNode("ServiceResult");
-        //    XmlNode n = node.SelectSingleNode("foodMenuEtcListAll");
-        //    XmlNode d = node.SelectSingleNode("FoodMenuEtcList");
-        //    string title = null;
-        //    foreach (XmlNode el in d.SelectSingleNode("title"))
-        //    {
-        //        title = Resturant.MakeResturant_title(el);
-        //        return title;
-        //    }
-        //    return null;
-        //}
-
-        
+        #endregion
         public string Find(string name)
         {
             string seq = GetSeq_Name(name);
@@ -185,24 +149,24 @@ namespace OA_Server_Consol
             }
             return null;
         }
-        public string GetTitle_Name(string name)
+        public string[] GetTitle_Name(string name)
         {
             foreach (Resturant res in reslist3)
             {
                 if (res.Name == name)
                 {
-                    return res.Title.ToString();
+                    return res.Title;
                 }
             }
             return null;
         }
-        public string GetPrice_Name(string name)
+        public string[] GetPrice_Name(string name)
         {
             foreach (Resturant res in reslist3)
             {
                 if (res.Name == name)
                 {
-                    return res.Price.ToString();
+                    return res.Price;
                 }
             }
             return null;
