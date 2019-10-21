@@ -10,6 +10,9 @@ using System.Xml;
 
 namespace OA_Server_Consol
 {
+    enum FHDATA { FH0000918 = 0, FH0000917,FH0000914, FH0000913, FH0000912 , FH0000911 , FH0000910 , FH0000909, FH0000908, FH0000907, FH0000906, FH0000905, FH0000904, FH0000903,
+        FH0000902, FH0000901, FH0000900, FH0000183, FH0000180, FH0000179, FH0000178, FH0000177, FH0000175, FH0000174, FH0000129, FH0000096, FH0000095, FH0000094, FH0000093,
+        FH0000092, FH0000091, FH0000090, FH0000089, FH0000088, FH0000087, FH0000086, FH0000084, FH0000083  }
     class ResturantSearcher
     {
         #region singleton pattern
@@ -37,10 +40,10 @@ namespace OA_Server_Consol
         #region 시작할때 데이터 받아옴
         public void SearchResturant2()
         {
-            for (int seq = 900; seq < 919; seq++)
+            for (FHDATA seq = FHDATA.FH0000918; seq <= FHDATA.FH0000083; seq++)
             {
                 reslist4.Clear();
-                XmlString2 = Data(seq);
+                XmlString2 = Data(seq.ToString());
                 doc = new XmlDocument();
                 doc.LoadXml(XmlString2);
                 doc.Save("Search.xml");
@@ -65,13 +68,13 @@ namespace OA_Server_Consol
                 }  
             }
         }
-        public string Data(int seq)
+        public string Data(string seq)
         {
             string results = string.Empty;
 
             string url = "http://apis.data.go.kr/6300000/tourFoodDataService/tourFoodDataItem"; // URL
             url += "?ServiceKey=" + "jywHyRc4HyGPMS4YSqc%2BxCR6Md%2BdWGAL%2Fc3LbkX5%2FqyYLzacjZGzxccCY0YPJE%2Br5Imx%2FT9tKDgFDtur0k%2Bntw%3D%3D"; // Service Key
-            url += "&foodSeq=FH0000" + seq;
+            url += "&foodSeq=" + seq;
 
             var request = (HttpWebRequest)WebRequest.Create(url);
             request.Method = "GET";
@@ -87,9 +90,9 @@ namespace OA_Server_Consol
         #endregion
 
         #region 데이터를 받아옴
-        public void SearchResturant()
+        public void SearchResturant(string name)
         {
-            string name = Packet.Instance.name;
+            //string name = Packet.Instance.name;
             reslist.Clear();
             XmlString = Find(name);
             doc = new XmlDocument();

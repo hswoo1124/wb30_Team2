@@ -1,8 +1,81 @@
 ﻿<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <ServiceResult>
   <comMsgHeader>
-    <returnCode>11</returnCode>
-    <returnMessage>NO_MANDATORY_REQUEST_PARAMETERS_ERROR</returnMessage>
-    <successYN>N</successYN>
+    <returnCode>00</returnCode>
+    <returnMessage>NORMAL_SERVICE</returnMessage>
+    <successYN>Y</successYN>
   </comMsgHeader>
+  <msgBody>
+    <dCodeNm>양식</dCodeNm>
+    <idx>107</idx>
+    <foodSeq>FH0000086</foodSeq>
+    <name>로제타</name>
+    <telCode>042</telCode>
+    <telKuk>862</telKuk>
+    <telNo>3332</telNo>
+    <addr1>대전광역시 유성구 대덕대로 516</addr1>
+    <addr2> (도룡동)</addr2>
+    <hitCnt>2198</hitCnt>
+    <contents1> 감미로운 음악, 진한 커피향이 분위기를 돋아주는 패밀리 레스토랑 로제타. 주말이나 저녁 데이트를 즐기는 연인과, 외식을 즐기는 가족들로 붐비는 이곳은, 대전 유성구 엑스포 과학공원 감천변에 위치하여 창밖으로 보이는 감천의 여유를 느낄 수 있는 최상의 장소다. </contents1>
+    <openTime>10:00</openTime>
+    <closeTime>01:00</closeTime>
+    <together>가족,연인,친구,단체회식,상견례</together>
+    <seatCnt>110</seatCnt>
+    <room>
+    </room>
+    <table1>18</table1>
+    <table2>
+    </table2>
+    <kidJoyroomFlag>N</kidJoyroomFlag>
+    <restRoom1>1</restRoom1>
+    <restRoom2>1</restRoom2>
+    <ownerDriver>대전IC→251번 호남고속도로지선 전주,북대전 방면으로 우측방향→대덕대로 유성,대덕연구개발특구 방면으로 좌회전→대덕대로 시청,정부대전청사 방면으로 우회전→대덕대로 유턴→엑스포공원길 우회전</ownerDriver>
+    <publicTraffic1>서울고속버스터미널→대전고속버스터미널, 고속버스둔산정류장
+동서울종합터미널→대전고속버스터미널
+센트럴시티터미널→고속버스둔산정류장, 유성금호고속버스터미널
+
+서울역→대전역, 신탄진역
+용산역→서대전역, 신탄진역
+영등포역→대전역, 서대전역, 신탄진역</publicTraffic1>
+    <publicTraffic2>121,705,911,5,301,318,606,918,618번</publicTraffic2>
+    <mapTour>
+    </mapTour>
+    <mapLodging>
+    </mapLodging>
+    <mapFood>
+    </mapFood>
+    <mapShopping>
+    </mapShopping>
+    <tAutochk>Y</tAutochk>
+    <rAutochk>Y</rAutochk>
+    <aAutochk>Y</aAutochk>
+    <sAutochk>Y</sAutochk>
+    <foodMenuEtcListAll>
+      <FoodMenuEtcList>
+        <basis>매콤한 소스의 해물 스파게티</basis>
+        <price>19,000원</price>
+        <title>상하이 스파게티</title>
+      </FoodMenuEtcList>
+      <FoodMenuEtcList>
+        <basis>연한 통개와 해산물요리</basis>
+        <price>17,000원</price>
+        <title>쉘크랩</title>
+      </FoodMenuEtcList>
+    </foodMenuEtcListAll>
+    <foodMenuListAll>
+      <foodMenuList>
+        <intro>함박스테이크+토마토스파게티+필라프</intro>
+        <path1>FileUpload/BEF/dj2009/incomming/2010/10/12/00810080405896.jpg</path1>
+        <path2>FileUpload/BEF/dj2009/incomming/2010/10/12/00810080405903.jpg</path2>
+        <path3>FileUpload/BEF/dj2009/incomming/2010/10/12/00810080405901.jpg</path3>
+        <path4>FileUpload/BEF/dj2009/incomming/2010/10/12/00810080405894.jpg</path4>
+        <price>9,900원</price>
+        <title>콤보정식</title>
+        <tFilename1>대전시_유성구_로제타_콤보정식11.JPG</tFilename1>
+        <tFilename2>대전시_유성구_로제타_콤보정식6.JPG</tFilename2>
+        <tFilename3>대전시_유성구_로제타_콤보정식4.JPG</tFilename3>
+        <tFilename4>대전시_유성구_로제타_콤보정식1.JPG</tFilename4>
+      </foodMenuList>
+    </foodMenuListAll>
+  </msgBody>
 </ServiceResult>
